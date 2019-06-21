@@ -13,8 +13,6 @@ namespace ZXingSample
 
 			var mainPage = new TabbedPage();
 			mainPage.Children.Add(new FullScreenScanning());
-			mainPage.Children.Add(new PartialScreenScanning());
-			mainPage.Children.Add(new GenerateBarcodePage());
 
 			MainPage = mainPage;
 		}
