@@ -15,9 +15,10 @@ namespace ZXingSample.Droid
 
 			// Request external storage read and write permissions
 			if (PackageManager.CheckPermission(Manifest.Permission.ReadExternalStorage, Android.App.Application.Context.PackageName) != Permission.Granted
-			&& PackageManager.CheckPermission(Manifest.Permission.WriteExternalStorage, Android.App.Application.Context.PackageName) != Permission.Granted)
+			&& PackageManager.CheckPermission(Manifest.Permission.WriteExternalStorage, Android.App.Application.Context.PackageName) != Permission.Granted
+			&& PackageManager.CheckPermission(Manifest.Permission.Internet, Android.App.Application.Context.PackageName) != Permission.Granted)
 			{
-				var permissions = new string[] { Manifest.Permission.ReadExternalStorage, Manifest.Permission.WriteExternalStorage };
+				var permissions = new string[] { Manifest.Permission.Internet, Manifest.Permission.ReadExternalStorage, Manifest.Permission.WriteExternalStorage };
 				RequestPermissions(permissions, 1);
 			}
 

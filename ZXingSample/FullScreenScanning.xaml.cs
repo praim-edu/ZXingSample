@@ -35,6 +35,10 @@ namespace ZXingSample
 								"Azione ottenuta: " + acme.Data.Pippo);
 
 							DependencyService.Get<Files>().Save("test.txt", acme.Data.Pippo);
+
+							XASmbServer xASmb = new XASmbServer("127.0.0.1", "test", "test");
+							xASmb.Start();
+							xASmb.Stop();
 						}
 					}
 
